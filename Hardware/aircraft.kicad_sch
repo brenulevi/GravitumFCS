@@ -1,0 +1,312 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8dc22ddc-eb0a-4b80-a714-26a959e826d2")
+	(paper "A4")
+	(title_block
+		(title "Gravitum Flight Control System")
+		(company "Breno Soares Alves")
+	)
+	(lib_symbols)
+	(sheet
+		(at 152.4 43.18)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "21c15db4-fcc2-43e2-90c6-38347e6b80b5")
+		(property "Sheetname" "Navigation_Peripherals"
+			(at 152.4 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "navigation_peripherals.kicad_sch"
+			(at 152.4 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 152.4 78.74)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2b3e482d-66cf-439d-9529-121b0ac868e2")
+		(property "Sheetname" "Flight_Control_Peripherals"
+			(at 152.4 78.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "flight_control_peripherals.kicad_sch"
+			(at 152.4 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 73.66 43.18)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "39a9e851-414a-49a1-b5c9-24c58b61cca2")
+		(property "Sheetname" "Power_Supply"
+			(at 73.66 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_supply.kicad_sch"
+			(at 73.66 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 73.66 78.74)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "99b12765-d975-4f5f-b9b8-f3f046a9bf7b")
+		(property "Sheetname" "Programming_Debug"
+			(at 73.66 78.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "programming_debug.kicad_sch"
+			(at 73.66 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 113.03 78.74)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c8fc8e69-bb49-4956-91d7-091fbd48c0bc")
+		(property "Sheetname" "Flight_Control_Unit"
+			(at 113.03 78.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "flight_control_unit.kicad_sch"
+			(at 113.03 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 191.77 43.18)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f68bfd02-e75f-45be-869e-2735da76252c")
+		(property "Sheetname" "Other_Connections"
+			(at 191.77 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "other_connections.kicad_sch"
+			(at 191.77 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 113.03 43.18)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fc11477c-3333-4f98-8873-4701516b0387")
+		(property "Sheetname" "Navigation_Unit"
+			(at 113.03 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "navigation_unit.kicad_sch"
+			(at 113.03 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

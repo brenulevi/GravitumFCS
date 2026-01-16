@@ -49,6 +49,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -57,28 +59,32 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define FCU_LED1_Pin GPIO_PIN_0
-#define FCU_LED1_GPIO_Port GPIOC
-#define FCU_LED2_Pin GPIO_PIN_1
-#define FCU_LED2_GPIO_Port GPIOC
-#define FCU_LED3_Pin GPIO_PIN_2
-#define FCU_LED3_GPIO_Port GPIOC
-#define FCU_LED4_Pin GPIO_PIN_3
-#define FCU_LED4_GPIO_Port GPIOC
+#define FCU_GPIOG_Pin GPIO_PIN_13
+#define FCU_GPIOG_GPIO_Port GPIOC
+#define FCU_GPIOF_Pin GPIO_PIN_14
+#define FCU_GPIOF_GPIO_Port GPIOC
+#define FCU_GPIOE_Pin GPIO_PIN_15
+#define FCU_GPIOE_GPIO_Port GPIOC
+#define FCU_GPIOD_Pin GPIO_PIN_0
+#define FCU_GPIOD_GPIO_Port GPIOC
+#define FCU_GPIOC_Pin GPIO_PIN_1
+#define FCU_GPIOC_GPIO_Port GPIOC
+#define FCU_GPIOB_Pin GPIO_PIN_2
+#define FCU_GPIOB_GPIO_Port GPIOC
+#define FCU_GPIOA_Pin GPIO_PIN_3
+#define FCU_GPIOA_GPIO_Port GPIOC
 #define FCU_SPI1_FLASH_CS_Pin GPIO_PIN_4
 #define FCU_SPI1_FLASH_CS_GPIO_Port GPIOC
-#define FCU_NU_GPIOF_Pin GPIO_PIN_12
-#define FCU_NU_GPIOF_GPIO_Port GPIOB
-#define FCU_NU_GPIOE_Pin GPIO_PIN_13
-#define FCU_NU_GPIOE_GPIO_Port GPIOB
-#define FCU_NU_GPIOD_Pin GPIO_PIN_14
-#define FCU_NU_GPIOD_GPIO_Port GPIOB
-#define FCU_NU_GPIOC_Pin GPIO_PIN_15
-#define FCU_NU_GPIOC_GPIO_Port GPIOB
-#define FCU_NU_GPIOB_Pin GPIO_PIN_6
-#define FCU_NU_GPIOB_GPIO_Port GPIOC
-#define FCU_NU_GPIOA_Pin GPIO_PIN_7
-#define FCU_NU_GPIOA_GPIO_Port GPIOC
+#define FCU_LED4_Pin GPIO_PIN_12
+#define FCU_LED4_GPIO_Port GPIOB
+#define FCU_LED3_Pin GPIO_PIN_13
+#define FCU_LED3_GPIO_Port GPIOB
+#define FCU_LED2_Pin GPIO_PIN_14
+#define FCU_LED2_GPIO_Port GPIOB
+#define FCU_LED1_Pin GPIO_PIN_15
+#define FCU_LED1_GPIO_Port GPIOB
+#define FCU_SDIO_DET_Pin GPIO_PIN_3
+#define FCU_SDIO_DET_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

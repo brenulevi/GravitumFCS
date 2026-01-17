@@ -35,7 +35,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "24CW1280T-I/OT"
+		(property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24CW16X-24CW32X-24CW64X-24CW128X-Data-Sheet-DS20005772.pdf"
 			(at 0 0 0)
 			(effects
 				(font
@@ -52,14 +52,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "ki_keywords" "24CW1280T-I/OT"
@@ -2319,7 +2311,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "MIC26903YJL-TR"
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MIC26903.pdf"
 			(at 0 0 0)
 			(effects
 				(font
@@ -2336,14 +2328,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "ki_keywords" "MIC26903YJL-TR"
@@ -3447,7 +3431,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "PCA9685PW_118"
+		(property "Datasheet" "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3464,14 +3448,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "ki_keywords" "PCA9685PW,118"
@@ -6148,7 +6124,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.winbond.com/resource-files/W25N01GV%20Rev%20O%20092619.pdf"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6299,8 +6275,8 @@
 		)
 		(symbol "W25N01GVZEIG_TR_0_0"
 			(rectangle
-				(start -17.78 -12.7)
-				(end 17.78 12.7)
+				(start -17.78 12.7)
+				(end 17.78 -12.7)
 				(stroke
 					(width 0.41)
 					(type default)

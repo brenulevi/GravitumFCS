@@ -23,7 +23,7 @@
 		)
 		(uuid "639e1928-cbe1-4b0c-9bd3-13793629801d")
 	)
-	(text "Version 0.1.0"
+	(text "Version 0.1.1"
 		(exclude_from_sim no)
 		(at 149.098 51.562 0)
 		(effects

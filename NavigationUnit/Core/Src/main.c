@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -115,6 +116,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -149,7 +151,12 @@ void SystemClock_Config(void)
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 15;
+  RCC_OscInitStruct.PLL.PLLN = 144;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 5;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -504,10 +511,7 @@ static void MX_GPIO_Init(void)
                           |NU_GPIOE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_LED4_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(NU_GPIOG_GPIO_Port, NU_GPIOG_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_GPIOG_Pin|NU_LED4_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : NU_LED3_Pin NU_LED2_Pin NU_LED1_Pin NU_GPIOC_Pin
                            NU_GPIOE_Pin */
@@ -518,39 +522,32 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : NU_IMU_ACCEL_INT_Pin */
+  GPIO_InitStruct.Pin = NU_IMU_ACCEL_INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(NU_IMU_ACCEL_INT_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pins : NU_SPI1_FLASH_CS_Pin NU_BARO_INT_Pin NU_GPIOD_Pin NU_GPS_PSS_Pin */
   GPIO_InitStruct.Pin = NU_SPI1_FLASH_CS_Pin|NU_BARO_INT_Pin|NU_GPIOD_Pin|NU_GPS_PSS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_MAG_INT_Pin NU_IMU_GYRO_INT_Pin NU_IMU_ACCEL_INT_Pin NU_SPI2_IMU_CS_Pin
-                           NU_GPIOB_Pin PB4 */
-  GPIO_InitStruct.Pin = NU_MAG_INT_Pin|NU_IMU_GYRO_INT_Pin|NU_IMU_ACCEL_INT_Pin|NU_SPI2_IMU_CS_Pin
-                          |NU_GPIOB_Pin|GPIO_PIN_4;
+  /*Configure GPIO pins : NU_MAG_INT_Pin NU_IMU_GYRO_INT_Pin NU_SPI2_IMU_CS_Pin NU_GPIOB_Pin
+                           NU_GPIOF_Pin */
+  GPIO_InitStruct.Pin = NU_MAG_INT_Pin|NU_IMU_GYRO_INT_Pin|NU_SPI2_IMU_CS_Pin|NU_GPIOB_Pin
+                          |NU_GPIOF_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_GPIOA_Pin NU_GPS_LNA_EN_Pin NU_LED4_Pin */
-  GPIO_InitStruct.Pin = NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_LED4_Pin;
+  /*Configure GPIO pins : NU_GPIOA_Pin NU_GPS_LNA_EN_Pin NU_GPIOG_Pin NU_LED4_Pin */
+  GPIO_InitStruct.Pin = NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_GPIOG_Pin|NU_LED4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : NU_GPIOF_Pin */
-  GPIO_InitStruct.Pin = NU_GPIOF_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(NU_GPIOF_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : NU_GPIOG_Pin */
-  GPIO_InitStruct.Pin = NU_GPIOG_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(NU_GPIOG_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : NU_GPS_NRST_Pin */
   GPIO_InitStruct.Pin = NU_GPS_NRST_Pin;

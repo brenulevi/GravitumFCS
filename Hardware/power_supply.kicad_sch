@@ -2631,6 +2631,16 @@
 		)
 		(uuid "29a271fe-8906-49a7-803b-77f3e7ea7798")
 	)
+	(text "Shunt"
+		(exclude_from_sim no)
+		(at 141.224 52.324 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "499780a2-eac3-449d-b8f2-3752e26cc730")
+	)
 	(text "5V Bulk Regulator"
 		(exclude_from_sim no)
 		(at 33.274 142.494 0)

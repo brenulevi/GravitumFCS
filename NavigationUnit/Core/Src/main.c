@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usb_device.h"
+#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -45,6 +45,8 @@ I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c2;
 I2C_HandleTypeDef hi2c3;
 
+SD_HandleTypeDef hsd;
+
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
 
@@ -63,12 +65,14 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_I2C3_Init(void);
+static void MX_SDIO_SD_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_UART4_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_USART3_UART_Init(void);
+static void MX_USB_OTG_FS_USB_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -110,13 +114,15 @@ int main(void)
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_I2C3_Init();
+  MX_SDIO_SD_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_UART4_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
-  MX_USB_DEVICE_Init();
+  MX_USB_OTG_FS_USB_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -276,6 +282,34 @@ static void MX_I2C3_Init(void)
   /* USER CODE BEGIN I2C3_Init 2 */
 
   /* USER CODE END I2C3_Init 2 */
+
+}
+
+/**
+  * @brief SDIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SDIO_SD_Init(void)
+{
+
+  /* USER CODE BEGIN SDIO_Init 0 */
+
+  /* USER CODE END SDIO_Init 0 */
+
+  /* USER CODE BEGIN SDIO_Init 1 */
+
+  /* USER CODE END SDIO_Init 1 */
+  hsd.Instance = SDIO;
+  hsd.Init.ClockEdge = SDIO_CLOCK_EDGE_RISING;
+  hsd.Init.ClockBypass = SDIO_CLOCK_BYPASS_DISABLE;
+  hsd.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_DISABLE;
+  hsd.Init.BusWide = SDIO_BUS_WIDE_1B;
+  hsd.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
+  hsd.Init.ClockDiv = 0;
+  /* USER CODE BEGIN SDIO_Init 2 */
+
+  /* USER CODE END SDIO_Init 2 */
 
 }
 
@@ -488,6 +522,27 @@ static void MX_USART3_UART_Init(void)
 }
 
 /**
+  * @brief USB_OTG_FS Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USB_OTG_FS_USB_Init(void)
+{
+
+  /* USER CODE BEGIN USB_OTG_FS_Init 0 */
+
+  /* USER CODE END USB_OTG_FS_Init 0 */
+
+  /* USER CODE BEGIN USB_OTG_FS_Init 1 */
+
+  /* USER CODE END USB_OTG_FS_Init 1 */
+  /* USER CODE BEGIN USB_OTG_FS_Init 2 */
+
+  /* USER CODE END USB_OTG_FS_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -507,53 +562,71 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, NU_LED3_Pin|NU_LED2_Pin|NU_LED1_Pin|NU_GPIOC_Pin
-                          |NU_GPIOE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, NU_LED_1_Pin|NU_LED_2_Pin|NU_LED_3_Pin|NU_LED_4_Pin
+                          |NU_GPIO_D_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_GPIOG_Pin|NU_LED4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(NU_GPIO_B_GPIO_Port, NU_GPIO_B_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : NU_LED3_Pin NU_LED2_Pin NU_LED1_Pin NU_GPIOC_Pin
-                           NU_GPIOE_Pin */
-  GPIO_InitStruct.Pin = NU_LED3_Pin|NU_LED2_Pin|NU_LED1_Pin|NU_GPIOC_Pin
-                          |NU_GPIOE_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(NU_GPIO_F_GPIO_Port, NU_GPIO_F_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : NU_LED_1_Pin NU_LED_2_Pin NU_LED_3_Pin NU_LED_4_Pin
+                           NU_GPIO_D_Pin */
+  GPIO_InitStruct.Pin = NU_LED_1_Pin|NU_LED_2_Pin|NU_LED_3_Pin|NU_LED_4_Pin
+                          |NU_GPIO_D_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : NU_IMU_ACCEL_INT_Pin */
-  GPIO_InitStruct.Pin = NU_IMU_ACCEL_INT_Pin;
+  /*Configure GPIO pin : NU_SPI1_CS_FLASH_Pin */
+  GPIO_InitStruct.Pin = NU_SPI1_CS_FLASH_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(NU_IMU_ACCEL_INT_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(NU_SPI1_CS_FLASH_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_SPI1_FLASH_CS_Pin NU_BARO_INT_Pin NU_GPIOD_Pin NU_GPS_PSS_Pin */
-  GPIO_InitStruct.Pin = NU_SPI1_FLASH_CS_Pin|NU_BARO_INT_Pin|NU_GPIOD_Pin|NU_GPS_PSS_Pin;
+  /*Configure GPIO pins : NU_GPIO_E_Pin NU_IMU_ACCEL_INT_Pin NU_IMU_GYRO_INT_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_E_Pin|NU_IMU_ACCEL_INT_Pin|NU_IMU_GYRO_INT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_MAG_INT_Pin NU_IMU_GYRO_INT_Pin NU_SPI2_IMU_CS_Pin NU_GPIOB_Pin
-                           NU_GPIOF_Pin */
-  GPIO_InitStruct.Pin = NU_MAG_INT_Pin|NU_IMU_GYRO_INT_Pin|NU_SPI2_IMU_CS_Pin|NU_GPIOB_Pin
-                          |NU_GPIOF_Pin;
+  /*Configure GPIO pins : NU_GPIO_C_Pin NU_GPIO_A_Pin NU_SPI2_IMU_CS_Pin NU_BARO_INT_Pin
+                           NU_MAG_INT_Pin NU_GPS_PSS_Pin NU_GPS_NRST_Pin NU_GPS_LNA_EN_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_C_Pin|NU_GPIO_A_Pin|NU_SPI2_IMU_CS_Pin|NU_BARO_INT_Pin
+                          |NU_MAG_INT_Pin|NU_GPS_PSS_Pin|NU_GPS_NRST_Pin|NU_GPS_LNA_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_GPIOA_Pin NU_GPS_LNA_EN_Pin NU_GPIOG_Pin NU_LED4_Pin */
-  GPIO_InitStruct.Pin = NU_GPIOA_Pin|NU_GPS_LNA_EN_Pin|NU_GPIOG_Pin|NU_LED4_Pin;
+  /*Configure GPIO pin : NU_GPIO_B_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(NU_GPIO_B_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : NU_GPS_NRST_Pin */
-  GPIO_InitStruct.Pin = NU_GPS_NRST_Pin;
+  /*Configure GPIO pin : PA9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(NU_GPS_NRST_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PA10 PA11 PA12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : NU_GPIO_F_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_F_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(NU_GPIO_F_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

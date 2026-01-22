@@ -3744,24 +3744,20 @@
 		(uuid "f7fbe191-de41-4efd-bb65-80063bff5a3a")
 	)
 	(no_connect
-		(at 49.53 92.71)
-		(uuid "5ba550b5-8787-4172-a630-c1217d8481ca")
+		(at 90.17 113.03)
+		(uuid "1eccc65d-75e3-48fa-aacf-fc27e5d2eba1")
 	)
 	(no_connect
-		(at 90.17 130.81)
-		(uuid "5c41264e-09ab-4147-9ff5-2d259f9e58d7")
+		(at 49.53 92.71)
+		(uuid "5ba550b5-8787-4172-a630-c1217d8481ca")
 	)
 	(no_connect
 		(at 90.17 115.57)
 		(uuid "891d4cfd-911e-4c61-bca5-d4a21a300c69")
 	)
 	(no_connect
-		(at 90.17 105.41)
-		(uuid "95b62b60-afb9-4adc-aea4-7f1c24030c54")
-	)
-	(no_connect
-		(at 49.53 90.17)
-		(uuid "ddd51363-73f7-4aa6-bcaf-f27f76512d80")
+		(at 49.53 110.49)
+		(uuid "c9999804-bafa-4669-abbc-a1172eca59c3")
 	)
 	(wire
 		(pts
@@ -4845,9 +4841,9 @@
 			)
 		)
 	)
-	(global_label "NU_GPIOB"
+	(global_label "NU_GPIO_B"
 		(shape input)
-		(at 90.17 148.59 0)
+		(at 90.17 120.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4857,7 +4853,7 @@
 		)
 		(uuid "18d5186e-6562-471b-902d-08c59baf1019")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.5291 148.59 0)
+			(at 103.4967 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4867,9 +4863,9 @@
 			)
 		)
 	)
-	(global_label "NU_LED1"
+	(global_label "NU_LED_1"
 		(shape input)
-		(at 49.53 128.27 180)
+		(at 49.53 107.95 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4879,12 +4875,34 @@
 		)
 		(uuid "19783301-f1ed-4775-b0bd-7736a493ffb9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.2596 128.27 0)
+			(at 37.292 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NU_USB_OTG_ID"
+		(shape input)
+		(at 90.17 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1ab69568-32c6-4f5e-b576-7be844d17cf7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 107.9719 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4911,46 +4929,24 @@
 			)
 		)
 	)
-	(global_label "NU_GPS_PSS"
+	(global_label "NU_LED_3"
 		(shape input)
-		(at 49.53 120.65 180)
+		(at 90.17 148.59 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
-		)
-		(uuid "2049127b-d8da-49e4-b19c-c214cd10a50e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.5101 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "NU_LED3"
-		(shape input)
-		(at 49.53 123.19 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "25ee9303-abb7-4c2f-9cb9-d23d4b255fbe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.2596 123.19 0)
+			(at 102.408 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4999,9 +4995,9 @@
 			)
 		)
 	)
-	(global_label "NU_LED4"
+	(global_label "NU_LED_4"
 		(shape input)
-		(at 90.17 133.35 0)
+		(at 90.17 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5011,7 +5007,7 @@
 		)
 		(uuid "2e774a5a-a1c0-458d-bb2b-fab1a91907e9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.4404 133.35 0)
+			(at 102.408 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5021,9 +5017,9 @@
 			)
 		)
 	)
-	(global_label "NU_LED2"
+	(global_label "NU_LED_2"
 		(shape input)
-		(at 49.53 125.73 180)
+		(at 49.53 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5033,7 +5029,7 @@
 		)
 		(uuid "31f49e78-8cb5-4e6a-9d16-91b09dc7f8e6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.2596 125.73 0)
+			(at 37.292 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5087,29 +5083,29 @@
 			)
 		)
 	)
-	(global_label "NU_GPIOG"
+	(global_label "NU_GPS_LNA_EN"
 		(shape input)
-		(at 90.17 123.19 0)
+		(at 49.53 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "3c5d14c0-a39d-4caa-b25f-7e8ba0f7db80")
+		(uuid "3b88109d-b4b7-4887-8e46-2fd77f08afd4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.5291 123.19 0)
+			(at 31.3048 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
-	(global_label "NU_SPI2_IMU_CS"
+	(global_label "NU_SPI2_CS_IMU"
 		(shape input)
 		(at 90.17 140.97 0)
 		(fields_autoplaced yes)
@@ -5155,7 +5151,7 @@
 	)
 	(global_label "NU_UART1_RX"
 		(shape input)
-		(at 90.17 92.71 0)
+		(at 90.17 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5165,7 +5161,7 @@
 		)
 		(uuid "4587b541-798f-4e33-b7c0-7fcdb701c499")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.0971 92.71 0)
+			(at 106.0971 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5177,29 +5173,29 @@
 	)
 	(global_label "NU_IMU_GYRO_INT"
 		(shape input)
-		(at 90.17 113.03 0)
+		(at 49.53 125.73 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "471cccfb-4519-4d4c-84ba-123226f4c2d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 109.9677 113.03 0)
+			(at 29.7323 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "NU_I2C1_SDA"
 		(shape input)
-		(at 90.17 128.27 0)
+		(at 90.17 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5209,29 +5205,7 @@
 		)
 		(uuid "479401de-b4cc-4755-a555-fd7c5530a3ba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.6133 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "NU_GPS_LNA_EN"
-		(shape input)
-		(at 90.17 118.11 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4d44e70b-e256-439c-9b5b-447f625cf763")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.3952 118.11 0)
+			(at 105.6133 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5285,9 +5259,53 @@
 			)
 		)
 	)
-	(global_label "NU_GPIOE"
+	(global_label "NU_GPS_NRST"
 		(shape input)
-		(at 49.53 110.49 180)
+		(at 49.53 102.87 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6c9c7659-8bc8-43e2-81c3-d155785c5a7b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.4215 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NU_USB_OTG_VBUS"
+		(shape input)
+		(at 90.17 90.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6d624ec6-c32f-41a8-88e8-c3f8742f94cd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9957 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NU_GPIO_E"
+		(shape input)
+		(at 49.53 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5297,7 +5315,7 @@
 		)
 		(uuid "6e4e9164-531d-4a69-b102-0997c8c953f8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 37.2919 110.49 0)
+			(at 36.3243 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5309,7 +5327,7 @@
 	)
 	(global_label "NU_I2C1_SCL"
 		(shape input)
-		(at 90.17 125.73 0)
+		(at 90.17 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5319,7 +5337,7 @@
 		)
 		(uuid "75be5822-bc2e-4466-96c3-56223397f3d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.5528 125.73 0)
+			(at 105.5528 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5375,22 +5393,22 @@
 	)
 	(global_label "NU_MAG_INT"
 		(shape input)
-		(at 90.17 110.49 0)
+		(at 49.53 90.17 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "821b7034-9693-4b16-9065-5ef468612e5f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.4643 110.49 0)
+			(at 35.2357 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5408,6 +5426,28 @@
 		(uuid "83843b3e-06fe-45b1-a003-a350dc7e2424")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 193.04 123.3496 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NU_GPS_PSS"
+		(shape input)
+		(at 90.17 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8f6b9b41-420a-4fd8-9686-5011966b9016")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105.1899 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5485,7 +5525,7 @@
 	)
 	(global_label "NU_BARO_INT"
 		(shape input)
-		(at 49.53 102.87 180)
+		(at 49.53 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5495,7 +5535,7 @@
 		)
 		(uuid "9ee99e64-60d5-459d-a821-69cdc7c6d084")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.0866 102.87 0)
+			(at 34.0866 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5549,9 +5589,9 @@
 			)
 		)
 	)
-	(global_label "NU_GPIOA"
+	(global_label "NU_GPIO_A"
 		(shape input)
-		(at 90.17 146.05 0)
+		(at 90.17 123.19 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5561,7 +5601,7 @@
 		)
 		(uuid "a93554f3-b0f0-468e-9731-17c120408828")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.3477 146.05 0)
+			(at 103.3153 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5573,7 +5613,7 @@
 	)
 	(global_label "NU_UART1_TX"
 		(shape input)
-		(at 90.17 90.17 0)
+		(at 90.17 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5583,7 +5623,7 @@
 		)
 		(uuid "aba25539-930f-4b29-b312-921f14418be7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.7947 90.17 0)
+			(at 105.7947 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5681,24 +5721,24 @@
 			)
 		)
 	)
-	(global_label "NU_GPIOC"
+	(global_label "NU_GPIO_C"
 		(shape input)
-		(at 49.53 105.41 180)
+		(at 90.17 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "bf651b7d-8917-43ff-944d-38b12fe6ab07")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 37.1709 105.41 0)
+			(at 103.4967 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5793,29 +5833,29 @@
 	)
 	(global_label "NU_SPI1_FLASH_CS"
 		(shape input)
-		(at 49.53 100.33 180)
+		(at 90.17 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "d306dfb0-cca2-43c4-957b-1d68f3a69f8c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.4624 100.33 0)
+			(at 111.2376 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
 	)
-	(global_label "NU_GPIOD"
+	(global_label "NU_GPIO_D"
 		(shape input)
-		(at 49.53 107.95 180)
+		(at 49.53 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5825,7 +5865,7 @@
 		)
 		(uuid "d552b894-423e-410d-b927-b29bcd53d3fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 37.1709 107.95 0)
+			(at 36.2033 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5857,9 +5897,9 @@
 			)
 		)
 	)
-	(global_label "NU_GPS_NRST"
+	(global_label "NU_IMU_ACCEL_INT"
 		(shape input)
-		(at 49.53 85.09 180)
+		(at 49.53 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5867,9 +5907,9 @@
 			)
 			(justify right)
 		)
-		(uuid "da744c5a-97d8-4d53-ad90-5f361cf324e0")
+		(uuid "dd499feb-92b5-4b69-b121-bc4385d8f209")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.4215 85.09 0)
+			(at 28.8857 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5879,31 +5919,9 @@
 			)
 		)
 	)
-	(global_label "NU_IMU_ACCEL_INT"
+	(global_label "NU_GPIO_F"
 		(shape input)
-		(at 90.17 77.47 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dd499feb-92b5-4b69-b121-bc4385d8f209")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.8143 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "NU_GPIOF"
-		(shape input)
-		(at 90.17 120.65 0)
+		(at 90.17 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5913,7 +5931,7 @@
 		)
 		(uuid "e03d5edf-08cc-4350-9a4e-5cd40660332e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.3477 120.65 0)
+			(at 103.3153 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)

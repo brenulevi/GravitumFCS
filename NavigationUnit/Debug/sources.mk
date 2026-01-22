@@ -24,7 +24,10 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/BMP390 \
+Drivers/IST8310 \
 Drivers/STM32F4xx_HAL_Driver/Src \
+Drivers/TMP100 \
 FATFS/App \
 FATFS/Target \
 Middlewares/Third_Party/FatFs/src \

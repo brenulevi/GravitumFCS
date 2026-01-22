@@ -1,0 +1,3 @@
+../Drivers/TMP100/TMP100.c:4:6:TMP100_Initialize	24	static
+../Drivers/TMP100/TMP100.c:19:7:TMP100_GetTemperature	32	static
+../Drivers/TMP100/TMP100.c:40:9:TMP100_ConfigToValue	24	static

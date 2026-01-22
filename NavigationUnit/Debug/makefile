@@ -17,7 +17,10 @@ RM := rm -rf
 -include Middlewares/Third_Party/FatFs/src/subdir.mk
 -include FATFS/Target/subdir.mk
 -include FATFS/App/subdir.mk
+-include Drivers/TMP100/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/IST8310/subdir.mk
+-include Drivers/BMP390/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
@@ -68,8 +71,8 @@ all: main-build
 main-build: NavigationUnit.elf secondary-outputs
 
 # Tool invocations
-NavigationUnit.elf NavigationUnit.map: $(OBJS) $(USER_OBJS) C:\Users\breninho\dev\GravitumFCS\NavigationUnit\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NavigationUnit.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\breninho\dev\GravitumFCS\NavigationUnit\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NavigationUnit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NavigationUnit.elf NavigationUnit.map: $(OBJS) $(USER_OBJS) /home/breno/dev/GravitumFCS/NavigationUnit/STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NavigationUnit.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/breno/dev/GravitumFCS/NavigationUnit/STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NavigationUnit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

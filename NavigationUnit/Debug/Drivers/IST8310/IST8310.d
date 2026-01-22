@@ -1,0 +1,3 @@
+Drivers/IST8310/IST8310.o: ../Drivers/IST8310/IST8310.c \
+ ../Drivers/IST8310/IST8310.h
+../Drivers/IST8310/IST8310.h:

@@ -65,20 +65,14 @@ void Error_Handler(void);
 #define NU_BARO_INT_GPIO_Port GPIOC
 #define NU_MAG_INT_Pin GPIO_PIN_0
 #define NU_MAG_INT_GPIO_Port GPIOC
-#define NU_GPIO_A_Pin GPIO_PIN_1
-#define NU_GPIO_A_GPIO_Port GPIOC
 #define NU_SPI1_CS_FLASH_Pin GPIO_PIN_4
 #define NU_SPI1_CS_FLASH_GPIO_Port GPIOA
-#define NU_GPIO_C_Pin GPIO_PIN_4
-#define NU_GPIO_C_GPIO_Port GPIOC
-#define NU_GPIO_D_Pin GPIO_PIN_5
-#define NU_GPIO_D_GPIO_Port GPIOC
-#define NU_GPIO_E_Pin GPIO_PIN_0
-#define NU_GPIO_E_GPIO_Port GPIOB
-#define NU_GPIO_F_Pin GPIO_PIN_1
-#define NU_GPIO_F_GPIO_Port GPIOB
-#define NU_SDIO_DET_Pin GPIO_PIN_2
-#define NU_SDIO_DET_GPIO_Port GPIOB
+#define NU_GPS_LNA_EN_Pin GPIO_PIN_4
+#define NU_GPS_LNA_EN_GPIO_Port GPIOC
+#define NU_GPS_NRST_Pin GPIO_PIN_5
+#define NU_GPS_NRST_GPIO_Port GPIOC
+#define NU_GPS_PSS_Pin GPIO_PIN_0
+#define NU_GPS_PSS_GPIO_Port GPIOB
 #define NU_SPI2_CS_IMU_Pin GPIO_PIN_12
 #define NU_SPI2_CS_IMU_GPIO_Port GPIOB
 #define NU_LED_4_Pin GPIO_PIN_14
@@ -89,14 +83,18 @@ void Error_Handler(void);
 #define NU_LED_2_GPIO_Port GPIOC
 #define NU_LED_1_Pin GPIO_PIN_7
 #define NU_LED_1_GPIO_Port GPIOC
-#define NU_GPIO_B_Pin GPIO_PIN_15
-#define NU_GPIO_B_GPIO_Port GPIOA
-#define NU_GPS_PSS_Pin GPIO_PIN_3
-#define NU_GPS_PSS_GPIO_Port GPIOB
-#define NU_GPS_NRST_Pin GPIO_PIN_4
-#define NU_GPS_NRST_GPIO_Port GPIOB
-#define NU_GPS_LNA_EN_Pin GPIO_PIN_5
-#define NU_GPS_LNA_EN_GPIO_Port GPIOB
+#define NU_GPIO_F_Pin GPIO_PIN_15
+#define NU_GPIO_F_GPIO_Port GPIOA
+#define NU_GPIO_E_Pin GPIO_PIN_12
+#define NU_GPIO_E_GPIO_Port GPIOC
+#define NU_GPIO_D_Pin GPIO_PIN_2
+#define NU_GPIO_D_GPIO_Port GPIOD
+#define NU_GPIO_C_Pin GPIO_PIN_3
+#define NU_GPIO_C_GPIO_Port GPIOB
+#define NU_GPIO_B_Pin GPIO_PIN_4
+#define NU_GPIO_B_GPIO_Port GPIOB
+#define NU_GPIO_A_Pin GPIO_PIN_5
+#define NU_GPIO_A_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

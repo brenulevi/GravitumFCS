@@ -18,11 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "fatfs.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "BMP390.h"
+#include "TMP100.h"
+#include "IST8310.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,6 +46,7 @@
 I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c2;
 I2C_HandleTypeDef hi2c3;
+DMA_HandleTypeDef hdma_i2c2_rx;
 
 SD_HandleTypeDef hsd;
 
@@ -55,13 +58,39 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
-/* USER CODE BEGIN PV */
+/* Definitions for tasks */
+osThreadId_t defaultTaskHandle;
+const osThreadAttr_t defaultTask_attributes = {
+  .name = "defaultTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 
-/* USER CODE END PV */
+osThreadId_t TempTaskHandle;
+const osThreadAttr_t TempTask_attributes = {
+	.name = "TempTask",
+	.stack_size = 128 * 4,
+	.priority = (osPriority_t) osPriorityNormal
+};
+
+osThreadId_t BaroTaskHandle;
+const osThreadAttr_t BaroTask_attributes = {
+	.name = "BaroTask",
+	.stack_size = 128 * 4,
+	.priority = (osPriority_t) osPriorityNormal
+};
+
+osThreadId_t MagTaskHandle;
+const osThreadAttr_t MagTask_attributes = {
+	.name = "MagTask",
+	.stack_size = 128 * 4,
+	.priority = (osPriority_t) osPriorityNormal
+};
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_I2C3_Init(void);
@@ -73,6 +102,11 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_USB_Init(void);
+void StartDefaultTask(void *argument);
+void TempTask(void* argument);
+void BaroTask(void* argument);
+void MagTask(void* argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -111,6 +145,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_I2C3_Init();
@@ -126,6 +161,45 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
+
+  /* Init scheduler */
+  osKernelInitialize();
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* creation of defaultTask */
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  TempTaskHandle = osThreadNew(TempTask, NULL, &TempTask_attributes);
+  BaroTaskHandle = osThreadNew(BaroTask, NULL, &BaroTask_attributes);
+  MagTaskHandle = osThreadNew(MagTask, NULL, &MagTask_attributes);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_EVENTS */
+  /* add events, ... */
+  /* USER CODE END RTOS_EVENTS */
+
+  /* Start scheduler */
+  osKernelStart();
+
+  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -155,8 +229,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 15;
@@ -172,7 +248,7 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
@@ -543,6 +619,22 @@ static void MX_USB_OTG_FS_USB_Init(void)
 }
 
 /**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Stream2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -562,22 +654,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, NU_LED_1_Pin|NU_LED_2_Pin|NU_LED_3_Pin|NU_LED_4_Pin
-                          |NU_GPIO_D_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, NU_GPIO_D_Pin|NU_LED_2_Pin|NU_LED_1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, NU_GPIO_F_Pin|NU_LED_4_Pin|NU_LED_3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(NU_GPIO_B_GPIO_Port, NU_GPIO_B_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(NU_GPIO_F_GPIO_Port, NU_GPIO_F_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : NU_LED_1_Pin NU_LED_2_Pin NU_LED_3_Pin NU_LED_4_Pin
-                           NU_GPIO_D_Pin */
-  GPIO_InitStruct.Pin = NU_LED_1_Pin|NU_LED_2_Pin|NU_LED_3_Pin|NU_LED_4_Pin
-                          |NU_GPIO_D_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  /*Configure GPIO pins : NU_IMU_ACCEL_INT_Pin NU_IMU_GYRO_INT_Pin NU_BARO_INT_Pin NU_MAG_INT_Pin
+                           NU_GPIO_A_Pin NU_GPIO_C_Pin */
+  GPIO_InitStruct.Pin = NU_IMU_ACCEL_INT_Pin|NU_IMU_GYRO_INT_Pin|NU_BARO_INT_Pin|NU_MAG_INT_Pin
+                          |NU_GPIO_A_Pin|NU_GPIO_C_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : NU_SPI1_CS_FLASH_Pin */
@@ -586,26 +676,27 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(NU_SPI1_CS_FLASH_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_GPIO_E_Pin NU_IMU_ACCEL_INT_Pin NU_IMU_GYRO_INT_Pin */
-  GPIO_InitStruct.Pin = NU_GPIO_E_Pin|NU_IMU_ACCEL_INT_Pin|NU_IMU_GYRO_INT_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : NU_GPIO_D_Pin NU_LED_2_Pin NU_LED_1_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_D_Pin|NU_LED_2_Pin|NU_LED_1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NU_GPIO_C_Pin NU_GPIO_A_Pin NU_SPI2_IMU_CS_Pin NU_BARO_INT_Pin
-                           NU_MAG_INT_Pin NU_GPS_PSS_Pin NU_GPS_NRST_Pin NU_GPS_LNA_EN_Pin */
-  GPIO_InitStruct.Pin = NU_GPIO_C_Pin|NU_GPIO_A_Pin|NU_SPI2_IMU_CS_Pin|NU_BARO_INT_Pin
-                          |NU_MAG_INT_Pin|NU_GPS_PSS_Pin|NU_GPS_NRST_Pin|NU_GPS_LNA_EN_Pin;
+  /*Configure GPIO pins : NU_GPIO_E_Pin NU_SDIO_DET_Pin NU_SPI2_CS_IMU_Pin NU_GPS_PSS_Pin
+                           NU_GPS_NRST_Pin NU_GPS_LNA_EN_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_E_Pin|NU_SDIO_DET_Pin|NU_SPI2_CS_IMU_Pin|NU_GPS_PSS_Pin
+                          |NU_GPS_NRST_Pin|NU_GPS_LNA_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : NU_GPIO_B_Pin */
-  GPIO_InitStruct.Pin = NU_GPIO_B_Pin;
+  /*Configure GPIO pins : NU_GPIO_F_Pin NU_LED_4_Pin NU_LED_3_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_F_Pin|NU_LED_4_Pin|NU_LED_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(NU_GPIO_B_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA9 */
   GPIO_InitStruct.Pin = GPIO_PIN_9;
@@ -621,12 +712,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : NU_GPIO_F_Pin */
-  GPIO_InitStruct.Pin = NU_GPIO_F_Pin;
+  /*Configure GPIO pin : NU_GPIO_B_Pin */
+  GPIO_InitStruct.Pin = NU_GPIO_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(NU_GPIO_F_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(NU_GPIO_B_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -636,6 +727,111 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void *argument)
+{
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */
+}
+
+void TempTask(void* argument)
+{
+	// Initialize TMP100
+	TMP100_Handle t;
+	TMP100_Initialize(&t, &hi2c2);
+
+	for(;;)
+	{
+		// Start DMA read in TMP100
+		TMP100_DMAStartRead(&t);
+		// Lock read semaphore
+		// Wait read semaphore unlock from DMA read callback
+		// Get data from TMP100
+		float temp = TMP100_GetTemperature(&t);
+
+		// Lock global data buffer mutex
+		// Update global data buffer
+		// Unlock global data buffer mutex
+
+		// OS Delay to be defined (rate)
+		osDelay(10);
+	}
+}
+
+void BaroTask(void* argument)
+{
+	// Initialize BMP390
+
+	for(;;)
+	{
+		// Start DMA read in BMP390
+		// Lock read semaphore
+		// Wait read semaphore unlock from DMA read callback
+		// Get data from BMP390
+
+		// Lock global data buffer mutex
+		// Update global data buffer
+		// Unlock global data buffer mutex
+
+		// OS Delay to be defined (rate)
+		osDelay(10);
+	}
+}
+
+void MagTask(void* argument)
+{
+	// Initialize IST8310
+
+	for(;;)
+	{
+		// Start DMA read in IST8310
+		// Lock read semaphore
+		// Wait read semaphore unlock from DMA read callback
+		// Get data from IST8310
+
+		// Lock global data buffer mutex
+		// Update global data buffer
+		// Unlock global data buffer mutex
+
+		// OS Delay to be defined (rate)
+		osDelay(10);
+	}
+}
+
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM1 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM1)
+  {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

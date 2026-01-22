@@ -6977,7 +6977,7 @@
 				)
 			)
 		)
-		(property "Footprint" "10LGA_2X2X0p75_BOS"
+		(property "Footprint" ""
 			(at 212.09 41.91 0)
 			(effects
 				(font
@@ -7618,7 +7618,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-23-5_2P9X1P6_MCH"
+		(property "Footprint" ""
 			(at 208.28 85.09 0)
 			(effects
 				(font

@@ -7601,7 +7601,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TSSOP28_SOT361-1_NXP"
+		(property "Footprint" ""
 			(at 212.09 41.91 0)
 			(effects
 				(font
@@ -8585,7 +8585,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-23-5_2P9X1P6_MCH"
+		(property "Footprint" ""
 			(at 85.09 158.75 0)
 			(effects
 				(font

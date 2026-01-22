@@ -6558,7 +6558,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MLF28_5X6_MCH"
+		(property "Footprint" ""
 			(at 104.14 93.98 0)
 			(effects
 				(font
@@ -8216,7 +8216,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SON_DFN6_3X3_STM"
+		(property "Footprint" ""
 			(at 127 167.64 0)
 			(effects
 				(font

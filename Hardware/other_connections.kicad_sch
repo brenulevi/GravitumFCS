@@ -2667,7 +2667,7 @@
 	)
 	(rectangle
 		(start 140.97 81.28)
-		(end 271.78 125.73)
+		(end 274.32 125.73)
 		(stroke
 			(width 0)
 			(type dash_dot)
@@ -2730,17 +2730,6 @@
 		)
 		(uuid "b22f4714-09cd-42de-9056-ecb44e24390d")
 	)
-	(text "NU don't have VBUS because of pin assignment,\nthat is not a problem because VBUS isn't required\nto run Device Mode"
-		(exclude_from_sim no)
-		(at 215.9 120.396 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b303a1a7-5759-4a9b-8d67-7bf04e1159d7")
-	)
 	(text "FCU - NU (I2C)"
 		(exclude_from_sim no)
 		(at 27.432 131.318 0)
@@ -2788,6 +2777,18 @@
 		(uuid "0bb7a71a-b344-40ff-8e04-168c78dffab9")
 	)
 	(junction
+		(at 220.98 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "116a4f95-5b86-4a21-ab6b-65b0e22251b8")
+	)
+	(junction
+		(at 149.86 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34d5a1ab-335a-49ff-9bcb-6d961a1cc748")
+	)
+	(junction
 		(at 252.73 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2818,6 +2819,12 @@
 		(uuid "a7206fd8-266f-4cb0-b35f-7a2efe4ac608")
 	)
 	(junction
+		(at 231.14 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5d3ce3d-37b4-4178-9440-ebb1842bcce8")
+	)
+	(junction
 		(at 160.02 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2840,10 +2847,6 @@
 		(uuid "1c00042b-f1fb-4174-a703-bff0e0a4467b")
 	)
 	(no_connect
-		(at 147.32 114.3)
-		(uuid "3b6bef16-3394-4792-941e-3d3d662d5bd9")
-	)
-	(no_connect
 		(at 153.67 160.02)
 		(uuid "5a3daa09-dd86-4ce7-ad1f-c6bf11d0ad89")
 	)
@@ -2852,20 +2855,12 @@
 		(uuid "6447b6ef-c0b2-4c0c-84d8-c975a390cb75")
 	)
 	(no_connect
-		(at 149.86 114.3)
-		(uuid "68a62ca6-4372-4711-832a-7ae91ad6dd5c")
-	)
-	(no_connect
 		(at 102.87 154.94)
 		(uuid "68c02fdd-c6dc-4da4-88a4-ed04ea364c20")
 	)
 	(no_connect
 		(at 102.87 160.02)
 		(uuid "71a17912-a44e-430c-a19e-302bfd51040b")
-	)
-	(no_connect
-		(at 228.6 107.95)
-		(uuid "815e580b-b087-4af7-b176-c02e825b5f7b")
 	)
 	(no_connect
 		(at 219.71 50.8)
@@ -2882,10 +2877,6 @@
 	(no_connect
 		(at 184.15 54.61)
 		(uuid "d84ca06a-a55a-4447-8f00-d5c4ec83c419")
-	)
-	(no_connect
-		(at 157.48 109.22)
-		(uuid "fa79df42-850e-4718-9aeb-f8530f8d0389")
 	)
 	(no_connect
 		(at 115.57 160.02)
@@ -2910,6 +2901,16 @@
 			(type default)
 		)
 		(uuid "033c2c9c-e3fa-45a1-aebe-8e6cc851afd2")
+	)
+	(wire
+		(pts
+			(xy 172.72 123.19) (xy 175.26 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "077a6cba-8e92-4c57-869b-9425177e8910")
 	)
 	(wire
 		(pts
@@ -3073,7 +3074,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 105.41) (xy 231.14 114.3)
+			(xy 232.41 106.68) (xy 232.41 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3093,13 +3094,33 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 106.68) (xy 234.95 106.68)
+			(xy 220.98 114.3) (xy 220.98 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f29ffa0-1588-47ba-bfdc-49c3b4fe64ef")
+	)
+	(wire
+		(pts
+			(xy 233.68 107.95) (xy 234.95 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "31463a44-a399-49ca-ab85-9c2545840ef0")
+	)
+	(wire
+		(pts
+			(xy 220.98 115.57) (xy 220.98 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "376d13cc-f5fa-4012-8d77-961bbb2ffda7")
 	)
 	(wire
 		(pts
@@ -3120,6 +3141,26 @@
 			(type default)
 		)
 		(uuid "3bd0905e-5fa7-435f-995b-6fe534217a0b")
+	)
+	(wire
+		(pts
+			(xy 160.02 109.22) (xy 160.02 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bdb9eca-543e-4e37-b664-b0d4288a3b8f")
+	)
+	(wire
+		(pts
+			(xy 231.14 88.9) (xy 234.95 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f18e1e8-bf4a-4786-8ebf-96e8f331ae9a")
 	)
 	(wire
 		(pts
@@ -3153,6 +3194,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 115.57) (xy 218.44 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bb10710-c805-4c20-8492-a28e4c47cc5d")
+	)
+	(wire
+		(pts
 			(xy 53.34 156.21) (xy 60.96 156.21)
 		)
 		(stroke
@@ -3163,13 +3214,23 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 97.79) (xy 234.95 97.79)
+			(xy 228.6 99.06) (xy 231.14 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4f1a2d35-99e1-4c9c-9c5d-63b65a3d31e0")
+	)
+	(wire
+		(pts
+			(xy 149.86 115.57) (xy 147.32 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f6c63f4-c8ce-4263-92f2-d7bf61b86d28")
 	)
 	(wire
 		(pts
@@ -3180,6 +3241,16 @@
 			(type default)
 		)
 		(uuid "50461e38-105c-4a5f-ab06-9ccaf8f9e934")
+	)
+	(wire
+		(pts
+			(xy 220.98 115.57) (xy 218.44 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "536953b4-deb7-43c9-9c70-d03e96ae6492")
 	)
 	(wire
 		(pts
@@ -3223,6 +3294,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 109.22) (xy 231.14 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65ab0aed-7e80-44a9-8a45-dcb342298a25")
+	)
+	(wire
+		(pts
 			(xy 219.71 40.64) (xy 223.52 40.64)
 		)
 		(stroke
@@ -3253,7 +3334,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 102.87) (xy 232.41 102.87)
+			(xy 228.6 104.14) (xy 233.68 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3303,6 +3384,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 99.06) (xy 234.95 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75fd1dae-b66c-4164-8f1b-cb788778408b")
+	)
+	(wire
+		(pts
 			(xy 172.72 99.06) (xy 180.34 99.06)
 		)
 		(stroke
@@ -3310,6 +3401,16 @@
 			(type default)
 		)
 		(uuid "78290d98-96d6-4c91-bede-fc3ae1e2cc8b")
+	)
+	(wire
+		(pts
+			(xy 149.86 114.3) (xy 149.86 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c0bdf45-976d-4fe7-85ae-b86df7e6c909")
 	)
 	(wire
 		(pts
@@ -3343,6 +3444,26 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 123.19) (xy 165.1 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8983f509-0f8f-4745-ae57-d5db15142354")
+	)
+	(wire
+		(pts
+			(xy 157.48 109.22) (xy 160.02 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b8c30e8-7f75-4cbe-8aa9-2474f04d2e2d")
+	)
+	(wire
+		(pts
 			(xy 38.1 68.58) (xy 46.99 68.58)
 		)
 		(stroke
@@ -3350,6 +3471,16 @@
 			(type default)
 		)
 		(uuid "8bcc9dcd-864d-42ed-b5e7-5fd1d6899fcd")
+	)
+	(wire
+		(pts
+			(xy 149.86 115.57) (xy 149.86 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd25bad-53ff-407d-a5f6-ca165472c30d")
 	)
 	(wire
 		(pts
@@ -3393,6 +3524,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 99.06) (xy 231.14 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f4e2a48-71cc-4414-996b-fdc352f0903e")
+	)
+	(wire
+		(pts
 			(xy 105.41 102.87) (xy 105.41 106.68)
 		)
 		(stroke
@@ -3403,7 +3544,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 97.79) (xy 261.62 97.79)
+			(xy 257.81 99.06) (xy 261.62 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3420,6 +3561,16 @@
 			(type default)
 		)
 		(uuid "9340d6ed-9901-4b24-836c-4f7c3eeea579")
+	)
+	(wire
+		(pts
+			(xy 242.57 123.19) (xy 245.11 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97d56669-9954-4817-a551-b6f0725f7d5c")
 	)
 	(wire
 		(pts
@@ -3513,6 +3664,26 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 109.22) (xy 231.14 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa46009d-aada-4bc2-b91d-7af1c9dc95be")
+	)
+	(wire
+		(pts
+			(xy 231.14 123.19) (xy 234.95 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abb7aa03-f312-4e53-9d05-313eb5e2a96e")
+	)
+	(wire
+		(pts
 			(xy 105.41 106.68) (xy 107.95 106.68)
 		)
 		(stroke
@@ -3520,6 +3691,16 @@
 			(type default)
 		)
 		(uuid "abe2daf7-952f-4c94-a9e1-4ce982bafdc2")
+	)
+	(wire
+		(pts
+			(xy 242.57 88.9) (xy 248.92 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b001d076-9c93-4164-9453-dff6afec69cd")
 	)
 	(wire
 		(pts
@@ -3563,7 +3744,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 114.3) (xy 234.95 114.3)
+			(xy 232.41 115.57) (xy 234.95 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3633,7 +3814,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 102.87) (xy 232.41 106.68)
+			(xy 233.68 104.14) (xy 233.68 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3673,7 +3854,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 97.79) (xy 250.19 97.79)
+			(xy 242.57 99.06) (xy 250.19 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3683,13 +3864,23 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 106.68) (xy 245.11 106.68)
+			(xy 242.57 107.95) (xy 245.11 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d98e5c84-840e-4024-b0bb-89226682635c")
+	)
+	(wire
+		(pts
+			(xy 147.32 115.57) (xy 147.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e059fd02-dfa8-4c84-b242-5ec590adb139")
 	)
 	(wire
 		(pts
@@ -3713,7 +3904,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 114.3) (xy 245.11 114.3)
+			(xy 242.57 115.57) (xy 245.11 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3773,7 +3964,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 105.41) (xy 231.14 105.41)
+			(xy 228.6 106.68) (xy 232.41 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3888,6 +4079,28 @@
 		(uuid "2b58f026-b179-4d4e-bb1b-c9c3aaea74f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 166.15 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "NU_USB_OTG_FS_ID"
+		(shape input)
+		(at 245.11 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2b6b3c72-e587-4e4e-8339-9913a6c8ffcc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 266.1776 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4073,6 +4286,28 @@
 			)
 		)
 	)
+	(global_label "NU_USB_OTG_FS_VBUS"
+		(shape input)
+		(at 248.92 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "681af1d4-3d24-4b13-b071-001e743581dc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.0114 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "FCU_UART1_RX"
 		(shape input)
 		(at 38.1 147.32 180)
@@ -4205,6 +4440,28 @@
 			)
 		)
 	)
+	(global_label "FCU_USB_OTG_FS_ID"
+		(shape input)
+		(at 175.26 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "89129426-7aba-49fe-92ba-80395cafa200")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 197.3557 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "FCU_UART2_TX"
 		(shape input)
 		(at 184.15 49.53 0)
@@ -4317,7 +4574,7 @@
 	)
 	(global_label "NU_USB_OTG_FS_DP"
 		(shape input)
-		(at 245.11 106.68 0)
+		(at 245.11 107.95 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4327,7 +4584,7 @@
 		)
 		(uuid "ae00265f-3b90-495a-bed4-717cfee42138")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 266.8428 106.68 0)
+			(at 266.8428 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4581,7 +4838,7 @@
 	)
 	(global_label "NU_USB_OTG_FS_DM"
 		(shape input)
-		(at 245.11 114.3 0)
+		(at 245.11 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4591,7 +4848,7 @@
 		)
 		(uuid "ecb110ed-e4b8-4afc-85fb-9dc44baf66a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.0242 114.3 0)
+			(at 267.0242 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4677,7 +4934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01d7e90c-8d2a-48b6-a0d2-4842297d1d54")
-		(property "Reference" "#PWR0115"
+		(property "Reference" "#PWR0114"
 			(at 121.92 152.4 0)
 			(effects
 				(font
@@ -4728,7 +4985,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0115")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -4744,7 +5001,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a177e90-e3b0-45a2-8294-13980e93bdc3")
-		(property "Reference" "#PWR0110"
+		(property "Reference" "#PWR0113"
 			(at 105.41 116.84 0)
 			(effects
 				(font
@@ -4794,7 +5051,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0110")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -4809,7 +5066,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1316e4b4-462d-433c-9f19-217268e5a111")
-		(property "Reference" "R36"
+		(property "Reference" "R47"
 			(at 168.91 110.998 90)
 			(effects
 				(font
@@ -4825,7 +5082,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 168.91 117.348 90)
 			(effects
 				(font
@@ -4861,7 +5118,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R36")
+					(reference "R47")
 					(unit 1)
 				)
 			)
@@ -4892,7 +5149,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 61.468 90)
 			(effects
 				(font
@@ -4943,7 +5200,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1cb37c25-13a8-40dc-8409-0ded4f007963")
-		(property "Reference" "#PWR0123"
+		(property "Reference" "#PWR0122"
 			(at 163.83 35.56 0)
 			(effects
 				(font
@@ -4994,7 +5251,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0123")
+					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
@@ -5010,7 +5267,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25dcb27d-3732-42fb-a375-4d534d68ae98")
-		(property "Reference" "#PWR0109"
+		(property "Reference" "#PWR0112"
 			(at 105.41 93.98 0)
 			(effects
 				(font
@@ -5060,7 +5317,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0109")
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -5168,7 +5425,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33c2b30d-3f56-4fdf-8cfc-fa42dd13729d")
-		(property "Reference" "#PWR0114"
+		(property "Reference" "#PWR0111"
 			(at 106.68 157.48 0)
 			(effects
 				(font
@@ -5219,7 +5476,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0114")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -5300,6 +5557,72 @@
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
 					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 220.98 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36a55766-6a5f-452e-973a-130484bf89d3")
+		(property "Reference" "#PWR0135"
+			(at 220.98 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 220.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 220.98 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9940dc95-1eaf-4de2-b29d-7bed600dfe18")
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
+					(reference "#PWR0135")
 					(unit 1)
 				)
 			)
@@ -5388,7 +5711,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "389f1b39-c102-4686-943f-a9b01a5a107b")
-		(property "Reference" "#PWR0125"
+		(property "Reference" "#PWR0126"
 			(at 200.66 41.91 0)
 			(effects
 				(font
@@ -5439,7 +5762,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0125")
+					(reference "#PWR0126")
 					(unit 1)
 				)
 			)
@@ -5447,7 +5770,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 261.62 97.79 270)
+		(at 261.62 99.06 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5455,8 +5778,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39c92cb9-c85c-4f57-9a08-529a6be32f86")
-		(property "Reference" "#PWR0135"
-			(at 257.81 97.79 0)
+		(property "Reference" "#PWR0132"
+			(at 257.81 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5465,7 +5788,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 265.43 97.7899 90)
+			(at 265.43 99.0599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5474,7 +5797,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 261.62 97.79 0)
+			(at 261.62 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5483,7 +5806,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 261.62 97.79 0)
+			(at 261.62 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5492,7 +5815,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 261.62 97.79 0)
+			(at 261.62 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5506,7 +5829,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0135")
+					(reference "#PWR0132")
 					(unit 1)
 				)
 			)
@@ -5522,7 +5845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a6c13fa-dd09-4e8b-bf9e-eac4e6ea7880")
-		(property "Reference" "#PWR0124"
+		(property "Reference" "#PWR0123"
 			(at 173.99 66.04 0)
 			(effects
 				(font
@@ -5572,7 +5895,73 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0124")
+					(reference "#PWR0123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 149.86 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3cea7e91-ca92-4eb2-a940-c8040533e6f5")
+		(property "Reference" "#PWR0134"
+			(at 149.86 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 149.86 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a8ed927-c307-4705-afbf-0da20e3047f9")
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
+					(reference "#PWR0134")
 					(unit 1)
 				)
 			)
@@ -5658,7 +6047,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "443b030c-c2ec-414d-b2df-b4e8551e2529")
-		(property "Reference" "J14"
+		(property "Reference" "J12"
 			(at 109.22 143.51 0)
 			(effects
 				(font
@@ -5734,7 +6123,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "J14")
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -5829,7 +6218,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 238.76 97.79 180)
+		(at 238.76 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5837,8 +6226,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49bac42d-26a2-49a1-8d79-84ed56f7c0af")
-		(property "Reference" "D17"
-			(at 239.0775 91.44 0)
+		(property "Reference" "D16"
+			(at 239.0775 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5846,15 +6235,15 @@
 			)
 		)
 		(property "Value" "SD103AWS"
-			(at 239.0775 93.98 0)
+			(at 239.0775 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 238.76 97.79 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+			(at 238.76 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5863,7 +6252,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 97.79 0)
+			(at 238.76 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5872,7 +6261,7 @@
 			)
 		)
 		(property "Description" "Schottky diode"
-			(at 238.76 97.79 0)
+			(at 238.76 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5889,7 +6278,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "D17")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -5989,7 +6378,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 153.67 35.56 0)
 			(effects
 				(font
@@ -6056,7 +6445,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 88.138 90)
 			(effects
 				(font
@@ -6108,7 +6497,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56baaa6a-18bd-4d6e-9f01-40298355c005")
-		(property "Reference" "#PWR0132"
+		(property "Reference" "#PWR0131"
 			(at 266.7 30.48 0)
 			(effects
 				(font
@@ -6159,7 +6548,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0132")
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -6175,7 +6564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b325e4e-d58a-43bc-a4f5-900ce7c16d75")
-		(property "Reference" "#PWR0118"
+		(property "Reference" "#PWR0115"
 			(at 111.76 157.48 0)
 			(effects
 				(font
@@ -6226,7 +6615,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0118")
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -6242,7 +6631,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6177ebff-6c4b-4b2e-a1b4-4e3bfbcad489")
-		(property "Reference" "#PWR0117"
+		(property "Reference" "#PWR0116"
 			(at 138.43 66.04 0)
 			(effects
 				(font
@@ -6292,7 +6681,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0117")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -6307,7 +6696,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "681587fe-bb52-48a4-bb05-c3d540c87974")
-		(property "Reference" "D13"
+		(property "Reference" "D14"
 			(at 181.102 35.814 90)
 			(effects
 				(font
@@ -6325,7 +6714,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 179.07 36.83 0)
 			(effects
 				(font
@@ -6370,7 +6759,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "D13")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -6404,7 +6793,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 160.9852 66.04 0)
 			(effects
 				(font
@@ -6456,7 +6845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "809a7f35-b50f-4dc4-a5a0-c41d14742fcd")
-		(property "Reference" "D16"
+		(property "Reference" "D13"
 			(at 169.2275 92.71 0)
 			(effects
 				(font
@@ -6472,7 +6861,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 168.91 99.06 0)
 			(effects
 				(font
@@ -6508,7 +6897,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "D16")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -6539,7 +6928,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 43.688 90)
 			(effects
 				(font
@@ -6591,7 +6980,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c66d0bd-c3e7-4235-9e74-911db6b64e02")
-		(property "Reference" "D14"
+		(property "Reference" "D15"
 			(at 227.6475 27.94 0)
 			(effects
 				(font
@@ -6607,7 +6996,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 227.33 34.29 0)
 			(effects
 				(font
@@ -6643,7 +7032,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "D14")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -6658,7 +7047,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8c91a367-dd35-489e-b445-6508c2de6b3e")
-		(property "Reference" "FB5"
+		(property "Reference" "FB4"
 			(at 184.15 92.456 90)
 			(effects
 				(font
@@ -6674,7 +7063,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 184.15 100.838 90)
 			(effects
 				(font
@@ -6710,7 +7099,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "FB5")
+					(reference "FB4")
 					(unit 1)
 				)
 			)
@@ -6718,15 +7107,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 238.76 106.68 90)
+		(at 238.76 107.95 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8cedcbfe-5573-4150-889d-6ed53f69a8d3")
-		(property "Reference" "R52"
-			(at 238.76 102.108 90)
+		(property "Reference" "R50"
+			(at 238.76 103.378 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6734,15 +7123,15 @@
 			)
 		)
 		(property "Value" "22"
-			(at 238.76 104.648 90)
+			(at 238.76 105.918 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 238.76 108.458 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 238.76 109.728 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6751,7 +7140,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 106.68 0)
+			(at 238.76 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6760,7 +7149,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 238.76 106.68 0)
+			(at 238.76 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6777,7 +7166,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R52")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -6808,7 +7197,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 97.028 90)
 			(effects
 				(font
@@ -6860,7 +7249,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8deb9ef3-080e-4376-82d0-af13f4674f3b")
-		(property "Reference" "#PWR0129"
+		(property "Reference" "#PWR0128"
 			(at 233.68 71.12 0)
 			(effects
 				(font
@@ -6910,7 +7299,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0129")
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -6925,7 +7314,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8eb63f61-18ac-49c9-b846-da9a23197b86")
-		(property "Reference" "D15"
+		(property "Reference" "D17"
 			(at 254.508 34.544 90)
 			(effects
 				(font
@@ -6943,7 +7332,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 252.73 35.56 0)
 			(effects
 				(font
@@ -6988,7 +7377,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "D15")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -6996,15 +7385,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 238.76 114.3 90)
+		(at 238.76 115.57 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8f298d46-6cb5-40bc-bb70-42d87e19a1ef")
-		(property "Reference" "R53"
-			(at 238.76 109.728 90)
+		(property "Reference" "R51"
+			(at 238.76 110.998 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,15 +7401,15 @@
 			)
 		)
 		(property "Value" "22"
-			(at 238.76 112.268 90)
+			(at 238.76 113.538 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 238.76 116.078 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 238.76 117.348 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7029,7 +7418,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 114.3 0)
+			(at 238.76 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7038,7 +7427,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 238.76 114.3 0)
+			(at 238.76 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7055,7 +7444,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R53")
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -7071,7 +7460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "923e7da9-e98d-41bc-982c-cc84cfee128b")
-		(property "Reference" "#PWR0127"
+		(property "Reference" "#PWR0121"
 			(at 160.02 72.39 0)
 			(effects
 				(font
@@ -7121,7 +7510,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0127")
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -7283,7 +7672,7 @@
 	)
 	(symbol
 		(lib_id "Connector:USB_B_Micro")
-		(at 220.98 102.87 0)
+		(at 220.98 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7291,8 +7680,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2fd754c-6340-4e6e-87ec-535127e54ad5")
-		(property "Reference" "J19"
-			(at 220.98 90.17 0)
+		(property "Reference" "J18"
+			(at 220.98 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7300,7 +7689,7 @@
 			)
 		)
 		(property "Value" "USB_B_Micro"
-			(at 220.98 92.71 0)
+			(at 220.98 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7308,7 +7697,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 104.14 0)
+			(at 224.79 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7317,7 +7706,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 224.79 104.14 0)
+			(at 224.79 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7326,7 +7715,7 @@
 			)
 		)
 		(property "Description" "USB Micro Type B connector"
-			(at 220.98 102.87 0)
+			(at 220.98 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7355,7 +7744,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "J19")
+					(reference "J18")
 					(unit 1)
 				)
 			)
@@ -7370,7 +7759,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac2af88a-dc6d-4d34-aa68-f0c69b6e8a48")
-		(property "Reference" "R47"
+		(property "Reference" "R36"
 			(at 49.53 122.174 90)
 			(effects
 				(font
@@ -7386,7 +7775,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 49.53 128.778 90)
 			(effects
 				(font
@@ -7422,7 +7811,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R47")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -7438,7 +7827,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aec39ccb-fd46-46ce-8f71-0093ec25613e")
-		(property "Reference" "R50"
+		(property "Reference" "R49"
 			(at 182.88 25.4 90)
 			(effects
 				(font
@@ -7454,7 +7843,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 182.88 33.528 90)
 			(effects
 				(font
@@ -7490,7 +7879,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R50")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -7506,7 +7895,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b59d910d-4b28-48a5-9e3e-2299b7881b51")
-		(property "Reference" "#PWR0131"
+		(property "Reference" "#PWR0130"
 			(at 247.65 64.77 0)
 			(effects
 				(font
@@ -7556,7 +7945,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0131")
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -7564,7 +7953,7 @@
 	)
 	(symbol
 		(lib_id "Device:FerriteBead")
-		(at 254 97.79 90)
+		(at 254 99.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7572,7 +7961,7 @@
 		(dnp no)
 		(uuid "b83c4704-85b9-40e8-99db-2ffc96d3dd71")
 		(property "Reference" "FB6"
-			(at 254 91.186 90)
+			(at 254 92.456 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7580,15 +7969,15 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 254 93.726 90)
+			(at 254 94.996 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 254 99.568 90)
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+			(at 254 100.838 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7597,7 +7986,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 254 97.79 0)
+			(at 254 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7606,7 +7995,7 @@
 			)
 		)
 		(property "Description" "Ferrite bead"
-			(at 254 97.79 0)
+			(at 254 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7654,7 +8043,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 163.83 37.338 90)
 			(effects
 				(font
@@ -7705,7 +8094,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd3bc97d-7bdd-4693-9a17-69a9b48c153f")
-		(property "Reference" "R35"
+		(property "Reference" "R46"
 			(at 168.91 103.378 90)
 			(effects
 				(font
@@ -7721,7 +8110,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 168.91 109.728 90)
 			(effects
 				(font
@@ -7757,7 +8146,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R35")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -7773,7 +8162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd4c2dbd-705e-4e71-a58a-1ffac3a642cf")
-		(property "Reference" "#PWR0122"
+		(property "Reference" "#PWR0120"
 			(at 149.86 157.48 0)
 			(effects
 				(font
@@ -7824,7 +8213,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0122")
+					(reference "#PWR0120")
 					(unit 1)
 				)
 			)
@@ -7858,7 +8247,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 234.6452 64.77 0)
 			(effects
 				(font
@@ -7910,7 +8299,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c20aaf49-4d9c-4f5a-91a5-54c5b7b398a4")
-		(property "Reference" "J16"
+		(property "Reference" "J14"
 			(at 138.43 34.29 0)
 			(effects
 				(font
@@ -7974,7 +8363,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "J16")
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -8057,7 +8446,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb1fecc4-c4dc-4861-ab25-6b9ea126417f")
-		(property "Reference" "#PWR0128"
+		(property "Reference" "#PWR0127"
 			(at 212.09 64.77 0)
 			(effects
 				(font
@@ -8107,7 +8496,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0128")
+					(reference "#PWR0127")
 					(unit 1)
 				)
 			)
@@ -8138,7 +8527,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 79.248 90)
 			(effects
 				(font
@@ -8181,6 +8570,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 238.76 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cee6937f-b5b3-475b-8460-b1d6aff3bb5f")
+		(property "Reference" "JP4"
+			(at 238.76 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at 238.76 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 238.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "475d0501-de26-4ebc-8bfe-f650dbe265f0")
+		)
+		(pin "1"
+			(uuid "8a9af8dc-a000-46c4-9df6-262db83b790b")
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 262.89 40.64 90)
 		(unit 1)
@@ -8205,7 +8662,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 266.7 39.6748 0)
 			(effects
 				(font
@@ -8248,6 +8705,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 238.76 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d082e329-d434-49c5-9f44-3e25017824fa")
+		(property "Reference" "R52"
+			(at 238.76 118.618 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "560"
+			(at 238.76 121.158 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 238.76 124.968 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 238.76 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f08e0b04-8748-49ae-84b2-1e58e18e099a")
+		)
+		(pin "1"
+			(uuid "60f1ca24-272a-476c-b330-96a5b3dc6705")
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
+					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 189.23 41.91 90)
 		(unit 1)
@@ -8272,7 +8796,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 193.04 40.9448 0)
 			(effects
 				(font
@@ -8324,7 +8848,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d6ec27ec-a626-49e0-bf2c-1a113cbc59c1")
-		(property "Reference" "#PWR0121"
+		(property "Reference" "#PWR0118"
 			(at 144.78 157.48 0)
 			(effects
 				(font
@@ -8375,7 +8899,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0121")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -8390,7 +8914,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d70b8e10-0871-41c4-96df-2a879fde4eec")
-		(property "Reference" "R46"
+		(property "Reference" "R35"
 			(at 49.53 113.284 90)
 			(effects
 				(font
@@ -8406,7 +8930,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 49.53 119.888 90)
 			(effects
 				(font
@@ -8442,7 +8966,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R46")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -8458,7 +8982,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e5f382d4-9705-4ac8-9ba7-792d6be5711e")
-		(property "Reference" "#PWR0116"
+		(property "Reference" "#PWR0110"
 			(at 96.52 152.4 0)
 			(effects
 				(font
@@ -8509,7 +9033,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0116")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -8524,7 +9048,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e6642e73-5d24-468e-9fcb-6d867786d8de")
-		(property "Reference" "R48"
+		(property "Reference" "R37"
 			(at 49.53 142.494 90)
 			(effects
 				(font
@@ -8540,7 +9064,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 49.53 149.098 90)
 			(effects
 				(font
@@ -8576,7 +9100,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R48")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -8592,7 +9116,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8c6e094-beb9-42c3-9dbf-8845fd8ece58")
-		(property "Reference" "#PWR0126"
+		(property "Reference" "#PWR0124"
 			(at 193.04 31.75 0)
 			(effects
 				(font
@@ -8643,7 +9167,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0126")
+					(reference "#PWR0124")
 					(unit 1)
 				)
 			)
@@ -8659,7 +9183,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea228f0f-7238-4e71-a31c-56307a3d7717")
-		(property "Reference" "#PWR0120"
+		(property "Reference" "#PWR0117"
 			(at 134.62 152.4 0)
 			(effects
 				(font
@@ -8710,7 +9234,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0120")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -8725,7 +9249,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ede1f822-f063-4980-a5cf-d0d50d21a507")
-		(property "Reference" "R49"
+		(property "Reference" "R38"
 			(at 49.53 151.384 90)
 			(effects
 				(font
@@ -8741,7 +9265,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 49.53 157.988 90)
 			(effects
 				(font
@@ -8777,7 +9301,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R49")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -8808,7 +9332,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 52.578 90)
 			(effects
 				(font
@@ -8859,7 +9383,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f163d056-dcdd-4b71-ba21-47cabb57a44d")
-		(property "Reference" "FB4"
+		(property "Reference" "FB5"
 			(at 237.4392 25.4 90)
 			(effects
 				(font
@@ -8875,7 +9399,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 237.49 36.068 90)
 			(effects
 				(font
@@ -8911,7 +9435,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "FB4")
+					(reference "FB5")
 					(unit 1)
 				)
 			)
@@ -8926,7 +9450,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f3e7c6d6-11d4-45f6-a488-6194c5bd7821")
-		(property "Reference" "#PWR0130"
+		(property "Reference" "#PWR0129"
 			(at 237.49 34.29 0)
 			(effects
 				(font
@@ -8977,7 +9501,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0130")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -9008,7 +9532,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 50.8 70.358 90)
 			(effects
 				(font
@@ -9059,7 +9583,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb4bf7cc-0ea5-4a76-b768-16781ca448eb")
-		(property "Reference" "R51"
+		(property "Reference" "R53"
 			(at 256.54 24.13 90)
 			(effects
 				(font
@@ -9075,7 +9599,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 256.54 32.258 90)
 			(effects
 				(font
@@ -9111,7 +9635,74 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "R51")
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 168.91 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fcb510a2-f6b0-4fe8-8738-1e1bca9c206b")
+		(property "Reference" "R48"
+			(at 168.91 118.618 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "560"
+			(at 168.91 121.158 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 168.91 124.968 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 168.91 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 168.91 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dce4703b-464f-48f5-8e2f-50b4fe8eddaa")
+		)
+		(pin "1"
+			(uuid "56cd7f46-fcfc-4130-8a6b-7a6c0d4e18d1")
+		)
+		(instances
+			(project "aircraft"
+				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -9127,7 +9718,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fef52262-bcfb-42b2-8ff3-8f855821d8de")
-		(property "Reference" "J18"
+		(property "Reference" "J16"
 			(at 149.86 91.44 0)
 			(effects
 				(font
@@ -9191,7 +9782,7 @@
 		(instances
 			(project "aircraft"
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "J18")
+					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -9207,7 +9798,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff59ebd3-5a80-437a-8214-99c6302dae35")
-		(property "Reference" "#PWR0134"
+		(property "Reference" "#PWR0125"
 			(at 187.96 99.06 0)
 			(effects
 				(font
@@ -9258,7 +9849,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/f68bfd02-e75f-45be-869e-2735da76252c"
-					(reference "#PWR0134")
+					(reference "#PWR0125")
 					(unit 1)
 				)
 			)

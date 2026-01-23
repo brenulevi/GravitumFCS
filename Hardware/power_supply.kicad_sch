@@ -4943,7 +4943,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02e3b2d4-3078-46a7-8d98-9bee0dbfd82e")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR019"
 			(at 222.25 132.08 0)
 			(effects
 				(font
@@ -4993,7 +4993,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR017")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -5592,7 +5592,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 255.27 92.71 0)
 			(effects
 				(font
@@ -5653,7 +5653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "404fe1bf-32fc-4c2e-b87e-2f00c79a718e")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 242.57 92.71 0)
 			(effects
 				(font
@@ -5704,7 +5704,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -5944,7 +5944,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 163.83 96.52 0)
 			(effects
 				(font
@@ -6066,7 +6066,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "561cfd8d-dbea-47ec-ac19-710aa522ca98")
-		(property "Reference" "#PWR0112"
+		(property "Reference" "#PWR017"
 			(at 157.48 62.23 0)
 			(effects
 				(font
@@ -6117,7 +6117,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR0112")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -6151,7 +6151,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 259.842 99.06 90)
 			(effects
 				(font
@@ -6558,7 +6558,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Aircraft_Footprints:MLF28_5X6_MCH"
 			(at 104.14 93.98 0)
 			(effects
 				(font
@@ -6763,7 +6763,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86dea514-30da-4f69-a370-b9a1a4d83eca")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 262.89 105.41 0)
 			(effects
 				(font
@@ -6814,7 +6814,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -6830,7 +6830,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c1fd114-ef35-408e-ab01-e3dc3641d413")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR020"
 			(at 243.84 125.73 0)
 			(effects
 				(font
@@ -6880,7 +6880,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR018")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -6914,7 +6914,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 195.2752 52.07 0)
 			(effects
 				(font
@@ -7033,7 +7033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a655bc3e-25b9-475d-ad8e-23ae9ca3a621")
-		(property "Reference" "#PWR0111"
+		(property "Reference" "#PWR016"
 			(at 167.64 31.75 0)
 			(effects
 				(font
@@ -7084,7 +7084,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR0111")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7301,7 +7301,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c620dd46-dd1a-4ec4-927d-984314a59689")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 184.15 40.64 0)
 			(effects
 				(font
@@ -7352,7 +7352,7 @@
 		(instances
 			(project ""
 				(path "/8dc22ddc-eb0a-4b80-a714-26a959e826d2/39a9e851-414a-49a1-b5c9-24c58b61cca2"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -7929,7 +7929,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 146.05 160.02 0)
 			(effects
 				(font
@@ -8148,7 +8148,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 148.082 163.83 90)
 			(effects
 				(font
@@ -8216,7 +8216,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Aircraft_Footprints:SON_DFN6_3X3_STM"
 			(at 127 167.64 0)
 			(effects
 				(font

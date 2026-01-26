@@ -58,20 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "copper_edge_clearance|201450000|105070000|759f987b-e4bd-46dd-8034-6a857bd07c8b|253ed2d8-0f22-4c8e-91f0-dafbe08caa3b",
-          ""
-        ],
-        [
-          "courtyards_overlap|156685000|77575000|359d5861-1df2-4fd2-8561-7ba3b64a3c63|e2c6c8f4-b69f-41d8-867d-e3f844d8fe59",
-          ""
-        ],
-        [
-          "courtyards_overlap|173525000|77575000|555b989b-b50d-43a0-a0e5-03d7840e799b|6d75e327-864a-43fe-894b-fe7e5046e883",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },

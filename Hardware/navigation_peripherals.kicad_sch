@@ -6892,15 +6892,15 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 96.52 100.33 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "27015cd0-9240-4abb-9215-35237a104dd3")
 		(property "Reference" "R20"
-			(at 99.06 99.0599 0)
+			(at 93.98 99.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6909,7 +6909,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 99.06 101.5999 0)
+			(at 93.98 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6918,7 +6918,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 94.742 100.33 90)
+			(at 98.298 100.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10345,15 +10345,15 @@
 	(symbol
 		(lib_id "Device:C")
 		(at 85.09 50.8 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d6b4b60a-417d-4587-9bd4-ecebd3500e5d")
 		(property "Reference" "C32"
-			(at 88.9 49.5299 0)
+			(at 81.28 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10362,7 +10362,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 88.9 52.0699 0)
+			(at 81.28 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10371,7 +10371,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 86.0552 54.61 0)
+			(at 84.1248 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)

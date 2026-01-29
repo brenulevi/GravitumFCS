@@ -3619,6 +3619,10 @@
 		(uuid "1eccc65d-75e3-48fa-aacf-fc27e5d2eba1")
 	)
 	(no_connect
+		(at 90.17 143.51)
+		(uuid "1eedce6e-da79-47d2-aa14-acc807f736f8")
+	)
+	(no_connect
 		(at 49.53 92.71)
 		(uuid "5ba550b5-8787-4172-a630-c1217d8481ca")
 	)
@@ -3627,8 +3631,20 @@
 		(uuid "891d4cfd-911e-4c61-bca5-d4a21a300c69")
 	)
 	(no_connect
+		(at 49.53 95.25)
+		(uuid "c89693b4-21af-451c-9510-9690bfceada2")
+	)
+	(no_connect
 		(at 49.53 110.49)
 		(uuid "c9999804-bafa-4669-abbc-a1172eca59c3")
+	)
+	(no_connect
+		(at 90.17 140.97)
+		(uuid "d58868c4-9837-4efd-b023-2812098cf2b5")
+	)
+	(no_connect
+		(at 49.53 97.79)
+		(uuid "e6167b7e-5e82-40bf-9100-9052b5e5ec77")
 	)
 	(wire
 		(pts
@@ -4932,28 +4948,6 @@
 			)
 		)
 	)
-	(global_label "NU_SPI2_CS_IMU"
-		(shape input)
-		(at 90.17 140.97 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3cdd8131-79c0-489b-b455-7110bd1e3865")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.879 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "NU_USB_OTG_FS_D-"
 		(shape input)
 		(at 90.17 95.25 0)
@@ -5033,28 +5027,6 @@
 		(uuid "479401de-b4cc-4755-a555-fd7c5530a3ba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 105.6133 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "NU_SPI2_SCK"
-		(shape input)
-		(at 90.17 143.51 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "57b4d268-464f-4943-95aa-dfda6e2a18b7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.7947 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5460,28 +5432,6 @@
 			)
 		)
 	)
-	(global_label "NU_SPI2_MISO"
-		(shape input)
-		(at 49.53 95.25 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "adcbff22-b8e2-4d76-8b77-924084bf404e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.0586 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "NU_SPI1_MISO"
 		(shape input)
 		(at 90.17 82.55 0)
@@ -5500,28 +5450,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "NU_SPI2_MOSI"
-		(shape input)
-		(at 49.53 97.79 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bcbf4531-e749-4af1-8ef8-c5038e9dda45")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.0586 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)

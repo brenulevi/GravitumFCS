@@ -1,4 +1,4 @@
-27174160058968760
+27175929866891643
 Aircraft_Footprints
 10LGA_2X2X0p75_BOS
 
@@ -300,6 +300,13 @@ XCVR_NEO-M8N-0
 0
 24
 24
+Aircraft_Footprints
+teste
+
+
+0
+0
+0
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
